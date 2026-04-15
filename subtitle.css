@@ -1,0 +1,75 @@
+/* Hide LinkedIn Learning's default subtitle */
+.video-transcript-overlay,
+.transcript-line.active,
+.vjs-text-track-display {
+  display: none !important;
+}
+
+/* Custom subtitle container */
+#lls-subtitle-container {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99999;
+  pointer-events: none;
+  width: 80%;
+  text-align: center;
+  transition: opacity 0.15s ease;
+}
+
+#lls-subtitle-container.lls-hidden {
+  opacity: 0;
+}
+
+#lls-subtitle-text {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.75);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  font-family: 'Segoe UI', 'Roboto', 'Noto Sans', 'Arial Unicode MS', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+/* Settings panel */
+#lls-settings-panel {
+  position: absolute;
+  bottom: 120px;
+  right: 20px;
+  z-index: 100000;
+  background: rgba(28, 28, 28, 0.95);
+  border-radius: 8px;
+  padding: 16px;
+  color: #fff;
+  font-family: 'Segoe UI', 'Roboto', 'Noto Sans', 'Arial Unicode MS', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 13px;
+  min-width: 220px;
+  display: none;
+  pointer-events: auto;
+}
+
+#lls-settings-panel.lls-visible {
+  display: block;
+}
+
+#lls-settings-panel label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#lls-settings-panel input[type="range"],
+#lls-settings-panel input[type="color"] {
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+#lls-settings-panel input[type="range"] {
+  width: 100px;
+}
